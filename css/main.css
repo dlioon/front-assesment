@@ -54,6 +54,10 @@ header .tm-menu-item:last-child {
   padding-right: 0;
 }
 
+header .tm-menu-item:hover {
+  text-decoration: underline;
+}
+
 header .tm-menu-item a {
   text-decoration: none;
   color: #082264;
@@ -88,7 +92,7 @@ header .tm-menu-item a {
   line-height: 1.25;
   color: #082264;
   margin-bottom: 25px;
-  max-width: 25vw;
+  max-width: 30vw;
 }
 
 #hero .hero-text {
