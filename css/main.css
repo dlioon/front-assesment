@@ -12,16 +12,24 @@ body {
   min-width: 450px;
 }
 
+.tm-container {
+  margin: 0 20px;
+}
+
 /* Header */
 header {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   height: 80px;
+  flex-basis: 100%;
+}
+
+header .tm-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-basis: 100%;
+  width: 100%;
 }
 
 header .tm-logo {
@@ -65,6 +73,20 @@ header .tm-menu-item a {
   font-weight: 600;
   text-transform: uppercase;
 }
+
+header .tm-menu-icon {
+  width: 20px;
+  height: 15px;
+  color: #082264;
+  padding:0;
+  margin:0;
+  display: none;
+}
+
+header .tm-menu-icon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 /* End Header */
 
 /* Hero Block */
@@ -96,10 +118,10 @@ header .tm-menu-item a {
 }
 
 #hero .hero-text {
-  font-size: 18px;
+  font-size: 1em;
   line-height: 22px;
   color: #082264;
-  max-width: 25vw;
+  max-width: 30vw;
 }
 /* End Hero Block */
 
@@ -308,34 +330,32 @@ footer a {
 }
 /* End Flex Table */
 
-@media (max-width: 900px) {
-  header {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  header nav {
-    order: 2;
-  }
-  .hero-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 620px) {
+@media (max-width: 768px) {
   header {
     margin: 0;
+    flex-wrap: wrap;
   }
-  header nav ul li:not(:first-child) {
-    margin-left: 15px;
+  header nav ul {
+    display: none;
+  }
+  header .tm-menu-icon{
+    display: block;
   }
   section article {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   section article .article-content, section article .article-image {
     order: 2;
     min-width: 100%;
+  }
+  section .article-title {
+    margin-top: 20px;
+  }
+  #hero .hero-title {
+    max-width: 100%;
+  }
+  #hero .hero-text {
+    max-width: 80%;
   }
 }
